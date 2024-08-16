@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component ,OnInit} from '@angular/core';
+import { UserServiceService } from '../../user-service.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private userService:UserServiceService) { }
+  ngOnInit(){
+  //   this.userService.getUsers().subscribe(arg =>
+  //     console.log(arg));
 
+  }
 }
