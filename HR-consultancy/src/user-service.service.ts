@@ -19,8 +19,8 @@ postUser(userData: any): Observable<any> {
 }
 
 
-// upload(userData: any): Observable<any> {
-//   return this.httpClient.post(`${this.apiUrl}/upload`, userData);
-// }
+companyUser(userData: any): Observable<any> {
+  return this.httpClient.post(`${this.apiUrl}/api/v1/company/registerCompany`, userData);
+}
 
 }
