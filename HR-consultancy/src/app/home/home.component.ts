@@ -1,5 +1,6 @@
 import { Component ,OnInit} from '@angular/core';
 import { UserServiceService } from '../../user-service.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -8,10 +9,20 @@ import { UserServiceService } from '../../user-service.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private userService:UserServiceService) { }
+  constructor(private router:Router) { }
   ngOnInit(){
-  //   this.userService.getUsers().subscribe(arg =>
-  //     console.log(arg));
+
 
   }
+
+  about(){
+this.router.navigate(["/about"])
+  }
+
+
+
+
+  services(){
+    this.router.navigate(["/services"])
+      }
 }

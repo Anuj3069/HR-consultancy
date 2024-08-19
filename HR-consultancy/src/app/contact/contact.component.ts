@@ -29,6 +29,9 @@ export class ContactComponent {
     const contactNumber = (document.getElementById('contactnumber') as HTMLInputElement)?.value;
     const message = (document.getElementById('message') as HTMLTextAreaElement)?.value;
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Contact number validation regex (10 digits)
+    const contactNumberRegex = /^\d{10}$/;
 
     if (!name || !email || !lastName || !contactNumber || !this.file) {
       alert('All fields are mandatory!');
@@ -36,7 +39,17 @@ export class ContactComponent {
       return;
 
     }
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      this.isLoading = false;
+      return;
+    }
 
+    if (!contactNumberRegex.test(contactNumber)) {
+      alert('Contact number must be 10 digits.');
+      this.isLoading = false;
+      return;
+    }
  const formData = new FormData();
   formData.append('username', name);
   formData.append('email', email);

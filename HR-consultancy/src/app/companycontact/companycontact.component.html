@@ -1,0 +1,106 @@
+<div class="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-8 text-white py-12 text-center">
+  <h1 class="text-5xl font-bold text-white mb-2">CONTACT US</h1>
+  <p class="text-xl uppercase tracking-widest text-white">GET IN TOUCH WITH US</p>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="flex flex-col lg:flex-row items-center">
+    <!-- Text content -->
+    <div class="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+      <p class="text-lg lg:text-xl mb-6">Connect With Us</p>
+      <h1 class="text-3xl lg:text-4xl font-semibold mb-4">
+        Start Building Your Talent Reservoir
+      </h1>
+      <p class="text-lg lg:text-xl mb-6">
+        RECROW excels in enabling financial resources. Our experts help individuals & organizations access a network of 50+ leading banks & financial institutes across India to offer:</p>
+    </div>
+
+    <!-- Image section -->
+    <div class="lg:w-1/2 relative">
+      <div class="w-full h-96 lg:h-[500px] relative overflow-hidden">
+        <img src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723805241/qmqkqobd7cddw3yvzuoo.jpg" alt="Office Building" class="absolute top-0 left-0 w-2/3 h-2/3 object-cover rounded-tl-lg">
+        <img src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723804892/cqf5niiohhbafeyozovh.jpg" alt="Team Meeting" class="absolute bottom-0 right-0 w-2/3 h-2/3 object-cover rounded-br-lg">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container mx-auto p-4">
+  <div class="flex flex-col md:flex-row gap-8">
+    <!-- Form Section -->
+    <div class="w-full md:w-1/2">
+      <form (submit)="onSubmit($event)" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input type="text" name="firstname" placeholder="First Name" class="p-2 border rounded" required>
+          <input type="text" name="lastName" placeholder="Last Name" class="p-2 border rounded" required>
+          <input type="email" name="email" placeholder="Email Address" class="p-2 border rounded" required
+                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+          <input type="tel" name="contactNumber" placeholder="Contact No." class="p-2 border rounded" required
+                 pattern="\d{10}">
+        </div>
+        <textarea name="remarks" placeholder="Remarks" class="w-full p-2 border rounded" rows="4" required></textarea>
+        <button type="submit" class="bg-red-500 text-white px-6 py-2 rounded">SUBMIT</button>
+      </form>
+    </div>
+    <!-- Contact Information Section -->
+    <div class="w-full md:w-1/2 space-y-4">
+      <div class="bg-yellow-400 p-4 rounded">
+        <h2 class="font-bold mb-2">Address</h2>
+        <p>602, Mathura Palace, Indralok Phase - 6, Near RBK School, Bhayandar East, Thane - 401105
+        </p>
+      </div>
+      <div class="bg-yellow-400 p-4 rounded">
+        <h2 class="font-bold mb-2">Email</h2>
+        <p>recrowmanagementsolutions&#64;gmail.com
+        </p>
+      </div>
+      <div class="bg-yellow-400 p-4 rounded">
+        <h2 class="font-bold mb-2">Contact No.</h2>
+        <p>+91-7420815827</p>
+        <p>+91-9987034395</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-between">
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+              <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+              <ul class="text-sm">
+                  <li><a href="" class="hover:underline">Home</a></li>
+                  <li><a href="/services" class="hover:underline">Services</a></li>
+                  <li><a href="/apply" class="hover:underline">Contact</a></li>
+              </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+              <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
+              <p class="text-sm">Email: recrowmanagementsolutions&#64;gmail.com</p>
+              <p class="text-sm">Phone: +91-7420815827</p>
+              <p class="text-sm">Phone: +91-9987034395</p>
+
+          </div>
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+            <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+            <div class="flex">
+              <a href="https://www.linkedin.com/in/recrow-management-solutions-aa526b320/" class="w-10 h-10 mr-2" target="_blank">
+                <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723813591/cn5mzqetmbikcup4unkk.webp" alt="LinkedIn">
+              </a>
+              <a href="#" class="w-10 h-10">
+                <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723813851/cnstlyv2eqnfaduysqwl.webp" alt="Social Media">
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="text-center mt-6 border-t border-gray-700 pt-4">
+        <p class="text-sm">&copy; 2024 RECROW MANAGEMENT SOLUTIONS PVT LTD. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
