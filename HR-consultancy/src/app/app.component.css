@@ -1,0 +1,9 @@
+body {
+  padding-top: 180px; /* Adjust this value to match your header's height */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 220px; /* Adjust for mobile, if necessary */
+  }
+}
