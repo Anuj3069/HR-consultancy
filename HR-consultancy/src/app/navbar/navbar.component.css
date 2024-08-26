@@ -1,5 +1,31 @@
+.header-spacer {
+  height: 196px; /* Adjusted value for header height */
+}
+
+@media (max-width: 768px) {
+  .header-spacer {
+    height: 226px; /* Increased height for mobile */
+  }
+}
+
+body {
+  padding-top: 196px; /* Matches the header-spacer height */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 226px; /* Matches the mobile header-spacer height */
+  }
+}
+
+
+
 .active{
   border-bottom: 2px solid #7c3aed;
-  transform: scale(0.3);
-  transition: border-bottom 0.3s ease,color 0.3s ease, transform 0.3s ease;;
+  transform: scale(1.1);
+  transition: border-bottom 0.3s ease,color 0.3s ease, transform 0.3s ease;
+}
+
+.imgicon{
+  cursor: pointer;
 }

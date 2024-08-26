@@ -3,7 +3,6 @@
   <p class="text-xl uppercase tracking-widest text-white">GET A HEAD START</p>
 </div>
 
-
 <section [hidden]="isLoading" class="text-blue-600 bg-white body-font relative">
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -11,119 +10,99 @@
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="name" class="leading-7 text-sm text-blue-600">First Name</label>
-            <input type="text" id="name" name="name" class="w-full  rounded border  focus:border-yellow-500 focus:bg-gray-900 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            <input type="text" id="name" name="name" class="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="lastname" class="leading-7 text-sm text-blue-600">Last Name</label>
-            <input type="text" id="lastname" name="lastname" class="w-full  rounded border  focus:border-yellow-500 focus:bg-gray-900 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            <input type="text" id="lastname" name="lastname" class="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="email" class="leading-7 text-sm text-blue-600">Email</label>
-            <input type="email" id="email" name="email" class="w-full  rounded border  focus:border-yellow-500 focus:bg-gray-900 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            <input type="email" id="email" name="email" class="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
           </div>
         </div>
-        <!-- <div class="p-2 w-1/2">
-          <div class="relative">
-            <label for="lastname" class="leading-7 text-sm text-blue-600">Last Name</label>
-            <input type="text" id="lastname" name="lastname" class="w-full  rounded border  focus:border-yellow-500 focus:bg-gray-900 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-          </div>
-        </div> -->
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="contactnumber" class="leading-7 text-sm text-blue-600">Contact Number</label>
-            <input type="tel" id="contactnumber" name="contactnumber" class="w-full  rounded border  focus:border-yellow-500 focus:bg-gray-900 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            <input type="tel" id="contactnumber" name="contactnumber" class="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
           </div>
         </div>
         <div class="p-2 w-full">
           <div class="relative">
             <label for="message" class="leading-7 text-sm text-blue-600">Message</label>
-            <textarea id="message" name="message" class="w-full  rounded border  focus:border-yellow-500 focus:bg-gray-900 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+            <textarea id="message" name="message" class="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
           </div>
         </div>
         <div class="p-2 w-full">
           <div class="relative">
-            <label for="uploadFile" class="leading-7 text-sm text-blue-600">Upload Resume</label>
+            <label for="uploadFile" class="leading-7 text-sm text-blue-600">Upload Resume (PDF or DOC/DOCX only)</label>
             <div>
               <label class="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" for="uploadFile">Choose File</label>
-              <input type="file" id="uploadFile" name="resume" class="hidden" (change)="onFileChange($event)" required>
-
-              {{file?.name}}
+              <input type="file" id="uploadFile" name="resume" class="hidden" (change)="onFileChange($event)" accept=".pdf,.doc,.docx" required>
+              <span class="ml-2">{{file?.name || 'No file chosen'}}</span>
             </div>
           </div>
         </div>
         <div class="p-2 w-full">
           <button id="submitBtn" (click)="handleSubmit()" [disabled]="isLoading" class="flex mx-auto text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">Submit</button>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
-
-
-
-
-
-
-<!-- GRADIENT CIRCLE PLANES -->
- <div [hidden]="!isLoading" class="background">
-<div  class="spinner-box">
-  <div class="leo-border-1">
-    <div class="leo-core-1"></div>
+<!-- Loading Spinner -->
+<div [hidden]="!isLoading" class="background">
+  <div class="spinner-box">
+    <div class="leo-border-1">
+      <div class="leo-core-1"></div>
+    </div>
+    <div class="leo-border-2">
+      <div class="leo-core-2"></div>
+    </div>
   </div>
-  <div class="leo-border-2">
-    <div class="leo-core-2"></div>
-  </div>
-
-</div>
-<div id="body">
-  <div class="maintext">
-    <span class="title">Loading...</span> <br>
+  <div id="body">
+    <div class="maintext">
+      <span class="title">Loading...</span> <br>
+    </div>
   </div>
 </div>
-</div>
 
-
+<!-- Footer -->
 <footer class="bg-gray-800 text-white py-6">
   <div class="container mx-auto px-4">
-      <div class="flex flex-wrap justify-between">
-          <div class="w-full md:w-1/4 mb-4 md:mb-0">
-              <h4 class="text-lg font-semibold mb-2">About Us</h4>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-          </div>
-          <div class="w-full md:w-1/4 mb-4 md:mb-0">
-              <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
-              <ul class="text-sm">
-                  <li><a href="" class="hover:underline">Home</a></li>
-                  <li><a href="/services" class="hover:underline">Services</a></li>
-                  <li><a href="/apply" class="hover:underline">Contact</a></li>
-              </ul>
-          </div>
-          <div class="w-full md:w-1/4 mb-4 md:mb-0">
-              <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
-              <p class="text-sm">Email: contact&#64;example.com</p>
-              <p class="text-sm">Phone: +1 234 567 890</p>
-          </div>
-          <div class="w-full md:w-1/4 mb-4 md:mb-0">
-              <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
-              <div class="flex space-x-4">
-                 <img style="width: 10%;" src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723813591/cn5mzqetmbikcup4unkk.webp" alt="">
-                 <img style="width: 10%;" src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723813851/cnstlyv2eqnfaduysqwl.webp" alt="">
-              </div>
-          </div>
+    <div class="flex flex-wrap justify-between">
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h4 class="text-lg font-semibold mb-2">About Us</h4>
+        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
       </div>
-      <div class="text-center mt-6 border-t border-gray-700 pt-4">
-        <p class="text-sm">&copy; 2024 RECROW MANAGEMENT SOLUTIONS PVT LTD. All rights reserved.</p>
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+        <ul class="text-sm">
+          <li><a href="" class="hover:underline">Home</a></li>
+          <li><a href="/services" class="hover:underline">Services</a></li>
+          <li><a href="/apply" class="hover:underline">Contact</a></li>
+        </ul>
       </div>
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
+        <p class="text-sm">Email: contact&#64;example.com</p>
+        <p class="text-sm">Phone: +1 234 567 890</p>
+      </div>
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+        <div class="flex space-x-4">
+          <img style="width: 10%;" src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723813591/cn5mzqetmbikcup4unkk.webp" alt="">
+          <img style="width: 10%;" src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723813851/cnstlyv2eqnfaduysqwl.webp" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-6 border-t border-gray-700 pt-4">
+      <p class="text-sm">&copy; 2024 RECROW MANAGEMENT SOLUTIONS PVT LTD. All rights reserved.</p>
+    </div>
   </div>
 </footer>
-
-
-
-
-

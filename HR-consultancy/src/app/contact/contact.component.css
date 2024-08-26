@@ -138,10 +138,10 @@ body {
 
 
 
-* {
+/* * {
   margin: 0px;
   padding: 0px;
-}
+} */
 
 /* html, */
 /* body {
@@ -200,3 +200,4 @@ body {
 .background{
 background-color: #111827;
 }
+

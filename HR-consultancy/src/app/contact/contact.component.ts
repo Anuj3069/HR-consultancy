@@ -17,7 +17,16 @@ export class ContactComponent {
   onFileChange(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files?.length) {
-      this.file = input.files[0];
+      const file = input.files[0];
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+
+      if (allowedTypes.includes(file.type)) {
+        this.file = file;
+      } else {
+        alert('Only PDF and DOC/DOCX files are allowed.');
+        input.value = ''; // Clear the file input
+        this.file = null;
+      }
     }
   }
 

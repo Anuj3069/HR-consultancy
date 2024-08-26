@@ -1,32 +1,17 @@
-<header class="text-gray-400 bg-white body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <!-- <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0"> -->
-      <a class="flex flex-col items-center text-gray-400 mb-4 md:mb-0">
-        <img src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723797053/xfpnyzitwpv8p4chilh0.png" alt="Novitiate logo" class="w-66 h-16">
-        <span class="text-xl font-medium mt-2">We STRIVE for your Organization to THRIVE</span>
-        <!-- <span class="text-sm">HOUSE OF NEW BEGINNING</span> -->
-      </a>
-
-
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 text-gray-800 hover:text-blue-600 hover:font-bold">Home</a>
-        <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 text-gray-800 hover:text-blue-600 hover:font-bold">About</a>
-        <a routerLink="/team" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 text-gray-800 hover:text-blue-600 hover:font-bold">Team</a>
-        <a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 text-gray-800 hover:text-blue-600 hover:font-bold">Services</a>
-
-        <!-- <a routerLink="/" class="mr-5 text-gray-800 hover:text-blue-600">Third Link</a> -->
-        <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 text-gray-800 hover:text-blue-600 hover:font-bold">Careers</a>
-        <a routerLink="/apply" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 text-gray-800 hover:text-blue-600 hover:font-bold">Contact</a>
-
-      </nav>
-
-    <!-- <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Button
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button> -->
+<header class="text-gray-400 bg-white body-font fixed top-0 left-0 right-0 z-50 shadow-md">
+  <div class="container mx-auto flex flex-wrap p-6 items-center justify-between">
+    <a class="flex flex-col items-center text-gray-400" (click)="onHomePage()">
+      <img src="https://res.cloudinary.com/dfe82hk93/image/upload/v1723797053/xfpnyzitwpv8p4chilh0.png" alt="Novitiate logo" class="w-100 h-24 object-contain imgicon">
+      <span class="text-xl font-medium mt-4 text-gray-800">We STRIVE for your Organization to THRIVE</span>
+    </a>
+    <nav class="flex flex-wrap items-center text-lg justify-center mt-6 md:mt-0">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-6 text-gray-800 hover:text-blue-600 hover:font-bold">Home</a>
+      <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-6 text-gray-800 hover:text-blue-600 hover:font-bold">About</a>
+      <a routerLink="/team" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-6 text-gray-800 hover:text-blue-600 hover:font-bold">Team</a>
+      <a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-6 text-gray-800 hover:text-blue-600 hover:font-bold">Services</a>
+      <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-6 text-gray-800 hover:text-blue-600 hover:font-bold">Careers</a>
+      <a routerLink="/apply" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="text-gray-800 hover:text-blue-600 hover:font-bold">Contact</a>
+    </nav>
   </div>
 </header>
-
-
-
+<div class="header-spacer"></div>
