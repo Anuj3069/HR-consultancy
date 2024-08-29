@@ -5,3 +5,7 @@
 .group{
   cursor: pointer;
 }
+.hand
+{
+  height: 20% !important;
+}
